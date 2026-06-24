@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>メンバー紹介 — 「細胞を創る」研究会 若手の会</title>
+  <meta name="description" content="「細胞を創る」研究会 若手の会の運営メンバー紹介ページです。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="「細胞を創る」研究会 若手の会">
+  <meta property="og:title" content="メンバー紹介 — 「細胞を創る」研究会 若手の会">
+  <meta property="og:description" content="「細胞を創る」研究会 若手の会の運営メンバー紹介ページです。">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="メンバー紹介 — 「細胞を創る」研究会 若手の会">
+  <meta name="twitter:description" content="「細胞を創る」研究会 若手の会の運営メンバー紹介ページです。">
+  <link rel="icon" href="images/f2PzmQbG_400x400.jpg" type="image/jpeg">
+
+  <!-- スタイルシート -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- フォント -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== ナビゲーション ===== -->
+  <nav class="site-nav">
+    <a href="index.html" class="logo">
+      「<span class="accent">細胞を創る</span>」研究会 若手の会
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="events.html">イベント</a></li>
+      <li><a href="members.html" class="current">メンバー</a></li>
+      <li><a href="joinus.html">join us</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ===== サブページ用ヒーロー ===== -->
+  <section class="hero hero-sub">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <h1 data-aos="fade-up">メンバー</h1>
+    <p class="lead" data-aos="fade-up" data-aos-delay="200">
+      若手の会を運営するコアメンバーをご紹介します。
+    </p>
+  </section>
+
+
+  <!-- ===== 運営メンバー ===== -->
+  <section class="section section-wide">
+    <h2 class="section-title" data-aos="fade-up">
+      <span class="accent">運営メンバー</span>
+    </h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+      若手の会のコアメンバーです。
+    </p>
+
+    <!--
+      ★★★ メンバーの追加方法 ★★★
+
+      <tbody> 内の <tr>...</tr> を1ブロックコピーして情報を書き換えてください。
+
+      【各列の説明】
+        氏名        … フルネームを記入
+        所属        … 大学・研究所・企業名など
+        役割        … 代表 / 副代表 / 広報 / Web担当 など
+        専門分野    … 研究テーマやキーワード
+        researchmap … URLを記入。ない場合は「—」で OK
+
+      【researchmap のリンク形式】
+        https://researchmap.jp/ユーザーID
+
+      【行を増やすときの注意】
+        <tr> をコピペするだけで自動的に表に追加されます。
+        data-aos-delay は不要です（表全体でアニメーションするため）。
+    -->
+
+    <div class="table-wrap" data-aos="fade-up" data-aos-delay="200">
+      <table class="member-table">
+        <thead>
+          <tr>
+            <th>氏名</th>
+            <th>所属</th>
+            <th>役割</th>
+            <th>専門分野</th>
+            <th>researchmap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="5">運営メンバー情報は公開準備中です。</td>
+          </tr>
+
+          <!--
+            ★ メンバーを追加するには、上の <tr>...</tr> ブロックを
+              コピーしてここに貼り付け、情報を書き換えてください。
+              researchmap がない方は「—」と記載してください。
+          -->
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ===== アドバイザー（任意セクション） ===== -->
+  <!--
+    ★ アドバイザーや顧問を表示したい場合はコメントを外して、
+      上と同じ形式で <table> を追加してください。
+
+  <section class="section section-wide">
+    <h2 class="section-title" data-aos="fade-up">
+      アドバイザー<span class="accent">・顧問</span>
+    </h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+      若手の会をサポートしてくださっている先生方です。
+    </p>
+    <div class="table-wrap" data-aos="fade-up" data-aos-delay="200">
+      <table class="member-table">
+        <thead>
+          <tr>
+            <th>氏名</th>
+            <th>所属</th>
+            <th>役割</th>
+            <th>専門分野</th>
+            <th>researchmap</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="name-cell">教授 名前</td>
+            <td>大学名 学部名</td>
+            <td><span class="role">顧問</span></td>
+            <td>専門分野</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  -->
+
+
+  <!-- ===== フッター ===== -->
+ <footer class="site-footer">
+    <p>© 2026 「細胞を創る」研究会 若手の会</p>
+    <p class="mt-1">
+      <a href="https://jscsr.org/">「細胞を創る」研究会公式HP</a>
+    </p>
+    <p class="mt-1">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <span class="footer-sep">｜</span>
+      Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+    </p>
+    
+  </footer>
+
+
+  <!-- AOS 初期化 -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 80,
+      easing: 'ease-out'
+    });
+  </script>
+
+</body>
+</html>
