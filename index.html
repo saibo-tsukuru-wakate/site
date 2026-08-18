@@ -3,199 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>「細胞を創る」研究会 若手の会</title>
-  <meta name="description" content="若手が一同に会し、細胞を再構成する研究と社会実装について議論するコミュニティです。">
+  <title>イベント — 「細胞を創る」研究会 若手の会</title>
+  <meta name="description" content="「細胞を創る」研究会 若手の会のイベント一覧・活動報告です。">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:site_name" content="「細胞を創る」研究会 若手の会">
-  <meta property="og:title" content="「細胞を創る」研究会 若手の会">
-  <meta property="og:description" content="若手が一同に会し、細胞を再構成する研究と社会実装について議論するコミュニティです。">
+  <meta property="og:title" content="イベント — 「細胞を創る」研究会 若手の会">
+  <meta property="og:description" content="「細胞を創る」研究会 若手の会のイベント一覧・活動報告です。">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="「細胞を創る」研究会 若手の会">
-  <meta name="twitter:description" content="若手が一同に会し、細胞を再構成する研究と社会実装について議論するコミュニティです。">
-  <meta name="google-site-verification" content="UNrC3AYmo-y0pEpTEdDV_Jztumxnjc0R6dmww-FGTS8" />
+  <meta name="twitter:title" content="イベント — 「細胞を創る」研究会 若手の会">
+  <meta name="twitter:description" content="「細胞を創る」研究会 若手の会のイベント一覧・活動報告です。">
   <link rel="icon" href="images/f2PzmQbG_400x400.jpg" type="image/jpeg">
 
-  <!-- スタイルシート -->
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-  <!-- フォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- ===== ナビゲーション ===== -->
-  <!--
-    ★ ページを追加するときは <li> を追加してください
-    ★ 現在のページには class="current" を付けてください
-  -->
   <nav class="site-nav">
     <a href="index.html" class="logo">
       「<span class="accent">細胞を創る</span>」研究会 若手の会
     </a>
     <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
     <ul class="nav-links">
-      <li><a href="index.html" class="current">ホーム</a></li>
-      <li><a href="events.html">イベント</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="events.html" class="current">イベント</a></li>
       <li><a href="members.html">メンバー</a></li>
       <li><a href="joinus.html">join us</a></li>
-      <li><a href="#contact">お問い合わせ</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
     </ul>
   </nav>
 
 
   <!-- ===== ヒーロー ===== -->
-  <section class="hero">
-    <!-- 背景の浮遊パーツ（細胞イメージ） -->
+  <section class="hero hero-sub">
     <div class="blob blob-1"></div>
     <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-
-    <h1 data-aos="fade-up">
-      「<span class="accent">細胞を創る</span>」研究会<br>若手の会
-    </h1>
+    <h1 data-aos="fade-up">イベント一覧</h1>
     <p class="lead" data-aos="fade-up" data-aos-delay="200">
-      若手が一同に会し、生命システム、とりわけ細胞を再構成する研究と<br>
-      その社会実装についてディスカッション・知見の共有をする場を提供します。
+      若手の会のイベント情報と活動報告をまとめています。
     </p>
-    <div data-aos="fade-up" data-aos-delay="400">
-      <a href="#about" class="btn btn-primary">もっと知る →</a>
-    </div>
   </section>
 
 
-  <!-- ===== 次回開催アナウンス ===== -->
-  <!--
-    ★ 開催情報の更新方法
-    - .announce-date の中身（月・日・年）を書き換えてください
-    - .announce-title（イベント名）、.announce-meta の場所・時間も更新してください
-    - 申し込みリンクが決まったら <a href="#"> の # を実際のURLに変更してください
-    - 開催が終わったらこのセクションごと削除するか、次の会の情報に書き換えてください
-  -->
-  <div class="announce-bar" data-aos="fade-up">
-    <div class="announce-inner">
-      <div class="announce-badge">次回開催</div>
-      <div class="announce-date-block">
-        <span class="announce-month">7月</span>
-        <span class="announce-day">11日</span>
-        <span class="announce-year">2026</span>
-      </div>
-      <div class="announce-body">
-        <div class="announce-title">生物工学若手の会 夏のセミナー2026 特別講演</div>
-        <div class="announce-meta">
-          <span>📍 神戸セミナーハウス（神戸市北区）</span>
-          <span>🕐 7月11日(土)〜12日(日)</span>
-        </div>
-      </div>
-      <a href="events.html" class="announce-cta">詳細を見る →</a>
+  <!-- ===== 今後のイベント ===== -->
+  <section class="section">
+    <h2 class="section-title" data-aos="fade-up">
+      今後のイベント
+    </h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+      参加申し込み受付中・準備中のイベントです。
+    </p>
+
+    <!--
+      ★★★ イベントの追加方法 ★★★
+
+      .event-entry をコピーして情報を書き換えてください。
+      終了したイベントは「過去のイベント」セクションに移動してください。
+
+      【レポートページがある場合】
+        <a href="events/ファイル名.html" class="event-link">レポートを読む →</a>
+
+      【まだレポートがない場合（告知のみ）】
+        <span class="event-status upcoming">参加受付中</span>
+        もしくは
+        <span class="event-status upcoming">準備中</span>
+    -->
+
+<div class="event-card-grid">
+
+  <!-- ▼▼▼ 若手交流会 3.0（受付中・先頭に表示） ▼▼▼ -->
+  <div class="event-card event-card--open" data-aos="fade-up" data-aos-delay="100">
+    <div class="event-card-open-badge">🎉 現在受付中！</div>
+    <div class="event-card-header upcoming">
+      <span class="event-card-date">2026年10月28日(水)〜29日(木)</span>
+      <h3>「細胞を創る」研究会若手交流会 3.0</h3>
+    </div>
+    <div class="event-card-body">
+      <p class="event-meta">
+        <span>📍 伊香保温泉 大衆旅館ふくぜん（群馬県）</span>
+      </p>
+      <p>「ノーガードで夢語ろ♡」をテーマに、合成・再構成生物学の若手が集う1泊2日の交流会です。招待講演・ワークショップを予定。申込締切：2026年9月20日（日）23:59</p>
+      <a href="wakate-koryu-3.html" class="event-link">詳細ページはこちら →</a>
+      <a href="https://connpass.com/event/403059/" class="event-link" target="_blank" rel="noopener">お申込みはこちら →</a>
     </div>
   </div>
 
-  <!-- ===== About ===== -->
-  <section id="about" class="section">
-    <h2 class="section-title" data-aos="fade-up">
-      <span class="accent">私たちについて</span>
-    </h2>
-    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
-      分野を超えた若手研究者・エンジニアが集まるコミュニティです。
-    </p>
+  <!-- ★ カードを増やすには上のブロックをコピー -->
 
-    <!--
-      ★ カードの追加・編集方法
-      .card を複製して中身を書き換えてください。
-      data-aos-delay の数値を 100 ずつ増やすと順番にアニメーションします。
-    -->
-    <div class="card-grid">
-      <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <div class="icon">🧬</div>
-        <h3>再構成生物学</h3>
-        <p>人工細胞、無細胞系、合成生物学などの最新研究を共有し、分野横断的なコラボレーションを推進します。</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <div class="icon">💡</div>
-        <h3>社会実装</h3>
-        <p>基礎研究の成果を社会に届けるため、産業界との連携やスタートアップ創出についても議論します。</p>
-      </div>
-      <div class="card" data-aos="fade-up" data-aos-delay="300">
-        <div class="icon">🤝</div>
-        <h3>若手ネットワーク</h3>
-        <p>学生・ポスドク・若手企業研究者が気軽に交流できるフラットなコミュニティを目指しています。</p>
-      </div>
-    </div>
+</div>
   </section>
 
 
-  <!-- ===== イベント ===== -->
-  <section id="events" class="section">
+  <!-- ===== 過去のイベント ===== -->
+  <section class="section">
     <h2 class="section-title" data-aos="fade-up">
-      <span class="accent">イベント情報</span>
+      過去のイベント
     </h2>
     <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
-      過去・今後のイベントをご紹介します。
+      過去のイベントと活動報告です。各イベントのレポートもご覧いただけます。
     </p>
 
-    <!--
-      ★ イベント追加方法
-      .timeline-item を複製して、日付・タイトル・説明を書き換えてください。
-      新しいイベントは上に追加するのがおすすめです。
-    -->
-    <div class="timeline">
-            <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
-        <div class="date">2026.07.11</div>
-        <h3>生物工学若手の会 夏のセミナー2026 特別講演</h3>
-        <p>神戸セミナーハウスにて開催された生物工学若手研究者の集い 夏のセミナー2026に、若手の会として特別講演枠で参加しました。</p>
+    <div class="event-list">
+
+      <!-- ▼▼▼ 生物工学若手の会 夏のセミナー2026 ▼▼▼ -->
+      <div class="event-entry" data-aos="fade-up" data-aos-delay="50">
+        <div class="event-date-badge">
+          <span class="month">Jul</span>
+          <span class="day">11</span>
+          <span class="year">2026</span>
+        </div>
+        <div class="event-info">
+          <h3>生物工学若手の会 夏のセミナー2026 特別講演</h3>
+          <p class="event-meta">
+            <span>📅 2026年07月11日（土）〜12日（日）</span>
+            <span>📍 神戸セミナーハウス（神戸市北区）</span>
+          </p>
+          <p>「細胞を創る」研究会 若手の会が特別講演枠で参加しました。</p>
+          <a href="https://www.sbj.or.jp/division/young/young_summer_seminar2026.html" class="event-link" target="_blank" rel="noopener">公式ページ →</a>
+          <span class="event-status past">開催済み</span>
+        </div>
       </div>
-      <div class="timeline-item" data-aos="fade-right" data-aos-delay="150">
-        <div class="date">2026.06.25</div>
-        <h3>note更新</h3>
-        <p>SynCell2026の参加報告を公開しました。</p>
-        <a href="https://note.com/saiboutsukuritai/n/n1e694655559e" class="event-link" target="_blank" rel="noopener">→　こちらから</a>
+
+      <!-- ▼▼▼ 過去イベント 2 ▼▼▼ -->
+      <div class="event-entry" data-aos="fade-up" data-aos-delay="100">
+        <div class="event-date-badge">
+          <span class="month">Apr</span>
+          <span class="day">26</span>
+          <span class="year">2026</span>
+        </div>
+        <div class="event-info">
+          <h3>新メンバー歓迎会</h3>
+          <p class="event-meta">
+            <span>📅 2026年04月26日（日）</span>
+            <span>📍 会場未公表</span>
+          </p>
+          <p>新メンバー歓迎会を開催しました。</p>
+          <span class="event-status past">開催済み</span>
+        </div>
       </div>
-      <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
-        <div class="date">2026.04.26</div>
-        <h3>運営メンバー歓迎会</h3>
-        <p>新メンバー歓迎会を開催しました。今後の活動についてはイベントページで順次お知らせします。</p>
+
+      <!-- ▼▼▼ 過去イベント 1 ▼▼▼ -->
+      <div class="event-entry" data-aos="fade-up" data-aos-delay="200">
+        <div class="event-date-badge">
+          <span class="month">Sep</span>
+          <span class="day">15</span>
+          <span class="year">2025</span>
+        </div>
+        <div class="event-info">
+          <h3>第2回若手交流会</h3>
+          <p class="event-meta">
+            <span>📅 2025年09月15日（月）</span>
+            <span>📍 立教大学 池袋キャンパス</span>
+          </p>
+          <p>「細胞を創る」研究会　第2回若手交流会参加報告記事を公開しました。</p>
+          <!--
+            ★ レポートページができたら下のコメントを外してリンクを有効化
+          -->
+          <a href="https://note.com/saiboutsukuritai/n/n940c62a0c1cd" class="event-link">レポートを読む →</a>
+        </div>
       </div>
-      <div class="timeline-item" data-aos="fade-right" data-aos-delay="250">
-        <div class="date">2026.02.17</div>
-        <h3>note更新</h3>
-        <p>第48回日本分子生物学会の参加記録記事を公開しました。</p>
-        <a href="https://note.com/saiboutsukuritai/n/n1c687e1ef081" class="event-link">→　こちらから</a>
-      </div>
-      <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
-        <div class="date">2025.10.03</div>
-        <h3>note更新</h3>
-        <p>「細胞を創る」研究会　第2回若手交流会参加報告記事を公開しました。</p>
-        <a href="https://note.com/saiboutsukuritai/n/n940c62a0c1cd" class="event-link">→　こちらから</a>
-      </div>
+
+      <!--
+        ★ 過去のイベントを追加するには .event-entry をコピーしてください。
+          新しいものが上に来るように並べるのがおすすめです。
+      -->
     </div>
-  </section>
-
-
-  <!-- ===== お問い合わせ ===== -->
-  <section id="contact" class="section text-center">
-    <h2 class="section-title" data-aos="fade-up">
-      <span class="accent">お問い合わせ</span>
-    </h2>
-    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
-      ご興味のある方はお気軽にご連絡ください。
-    </p>
-    <p data-aos="fade-up" data-aos-delay="100">wakate.saiboutsukuru[at]gmail.com
-    </p>
-    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
-      [at]を@に変換してください。
-    </p>
-    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
-      X(旧twitter)からのDMでもお問い合わせを受け付けております。
-      <a href="https://x.com/saiboutsukuruwa" class="event-link">こちらから</a>どうぞ
-    </p>
   </section>
 
 
   <!-- ===== フッター ===== -->
-  <footer class="site-footer">
+ <footer class="site-footer">
     <p>© 2026 「細胞を創る」研究会 若手の会</p>
     <p class="mt-1">
       <a href="https://jscsr.org/">「細胞を創る」研究会公式HP</a>
@@ -209,15 +190,9 @@
   </footer>
 
 
-  <!-- AOS 初期化 -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 800,      // アニメーションの長さ（ミリ秒）
-      once: true,         // true = 一度だけ再生 / false = 毎回再生
-      offset: 80,         // 画面に入ってから発火するまでの距離(px)
-      easing: 'ease-out'
-    });
+    AOS.init({ duration: 800, once: true, offset: 80, easing: 'ease-out' });
   </script>
 
 </body>
