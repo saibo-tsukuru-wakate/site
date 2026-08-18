@@ -1000,6 +1000,26 @@ a {
   padding: 0 24px;
 }
 
+.announce-bar--open {
+  border: 2px solid #e8a000;
+  box-shadow: 0 0 0 4px rgba(232,160,0,0.15);
+  padding: 0;
+}
+
+.announce-bar--open .announce-inner {
+  padding: 28px 24px;
+}
+
+.announce-open-strip {
+  background: #e8a000;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 7px 24px;
+}
+
 .announce-inner {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -1172,6 +1192,27 @@ a {
   border: 1px solid var(--c-border);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.event-card--open {
+  border: 2px solid var(--c-primary);
+  box-shadow: 0 0 0 4px rgba(15,155,142,0.10);
+}
+
+.event-card-open-badge {
+  background: #e8a000;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  display: block;
+  text-align: center;
+}
+
+.event-card--open .event-card-header {
+  padding-top: 12px;
 }
 
 .event-card:hover {

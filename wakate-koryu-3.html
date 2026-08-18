@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>若手交流会 3.0 — 「細胞を創る」研究会 若手の会</title>
+  <meta name="description" content="「細胞を創る」研究会若手交流会 3.0「ノーガードで夢語ろ♡」伊香保温泉にて開催。2026年10月28日〜29日。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:site_name" content="「細胞を創る」研究会 若手の会">
+  <meta property="og:title" content="若手交流会 3.0 — ノーガードで夢語ろ♡">
+  <meta property="og:description" content="「細胞を創る」研究会若手交流会 3.0。伊香保温泉 大衆旅館ふくぜんにて2026年10月28日〜29日開催。">
+  <link rel="icon" href="images/f2PzmQbG_400x400.jpg" type="image/jpeg">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== 交流会ページ専用スタイル ===== */
+
+    .hero-koryu {
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      background: linear-gradient(135deg, var(--c-dark-grad-1), var(--c-dark-grad-2), var(--c-dark-grad-3));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-koryu::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(15,155,142,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(92,224,210,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .event-number {
+      display: inline-block;
+      background: var(--c-primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      padding: 6px 20px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .hero-koryu h1 {
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      position: relative;
+    }
+
+    .hero-koryu .catchcopy {
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      color: var(--c-primary-light);
+      font-weight: 700;
+      margin-bottom: 32px;
+      position: relative;
+    }
+
+    .hero-koryu .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 24px;
+      position: relative;
+    }
+
+    .hero-koryu .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.75);
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    /* 締切バナー */
+    .deadline-bar {
+      background: #c0392b;
+      color: #fff;
+      text-align: center;
+      padding: 12px 24px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin-top: 60px;
+    }
+
+    /* 情報カード */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .info-card {
+      background: var(--c-card-bg);
+      border-radius: 16px;
+      padding: 28px 20px;
+      border: 1px solid var(--c-border);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+    }
+
+    .info-card .info-icon { font-size: 2rem; margin-bottom: 12px; }
+    .info-card .info-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: var(--c-primary);
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+    }
+    .info-card .info-value {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--c-dark);
+      line-height: 1.5;
+    }
+    .info-card .info-sub {
+      font-size: 0.75rem;
+      color: var(--c-text-muted);
+      font-weight: 300;
+      margin-top: 4px;
+    }
+
+    /* セッションカード */
+    .session-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .session-card {
+      background: var(--c-card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--c-border);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .session-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.07);
+    }
+
+    .session-header {
+      background: linear-gradient(135deg, var(--c-primary), var(--c-primary-light));
+      color: #fff;
+      padding: 14px 22px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .session-header.workshop {
+      background: linear-gradient(135deg, var(--c-dark-grad-2), var(--c-dark-grad-3));
+    }
+
+    .session-time {
+      font-size: 0.75rem;
+      opacity: 0.85;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+
+    .session-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .session-body {
+      padding: 20px 22px;
+    }
+
+    .speaker-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .speaker-item {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      font-size: 0.88rem;
+    }
+
+    .speaker-name {
+      font-weight: 700;
+      color: var(--c-dark);
+      white-space: nowrap;
+    }
+
+    .speaker-affil {
+      color: var(--c-text-muted);
+      font-weight: 300;
+      font-size: 0.82rem;
+    }
+
+    .session-desc {
+      font-size: 0.88rem;
+      color: var(--c-text-light);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-top: 8px;
+    }
+
+    /* タイムライン */
+    .timetable {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid var(--c-border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .timetable-row {
+      display: flex;
+      border-bottom: 1px solid var(--c-border);
+    }
+
+    .timetable-row:last-child {
+      border-bottom: none;
+    }
+
+    .timetable-time {
+      flex-shrink: 0;
+      width: 100px;
+      padding: 14px 16px;
+      background: var(--c-primary-pale);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--c-primary);
+      display: flex;
+      align-items: center;
+    }
+
+    .timetable-event {
+      flex: 1;
+      padding: 14px 20px;
+      font-size: 0.88rem;
+      color: var(--c-text-light);
+      font-weight: 300;
+      display: flex;
+      align-items: center;
+    }
+
+    .timetable-event.highlight {
+      font-weight: 700;
+      color: var(--c-dark);
+    }
+
+    .timetable-day-header {
+      background: var(--c-dark);
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+    }
+
+    /* 参加費 */
+    .fee-box {
+      background: var(--c-card-bg);
+      border-radius: 16px;
+      border: 2px solid var(--c-primary);
+      padding: 32px 28px;
+      text-align: center;
+    }
+
+    .fee-amount {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--c-primary);
+      margin: 12px 0;
+    }
+
+    .fee-note {
+      font-size: 0.82rem;
+      color: var(--c-text-muted);
+      font-weight: 300;
+      margin-top: 4px;
+    }
+
+    .fee-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .fee-includes-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--c-text-light);
+      font-weight: 300;
+    }
+
+    .fee-includes-item.included::before {
+      content: '✓';
+      color: var(--c-primary);
+      font-weight: 900;
+    }
+
+    .fee-includes-item.excluded::before {
+      content: '×';
+      color: #999;
+      font-weight: 900;
+    }
+
+    /* アクセス */
+    .access-card {
+      background: var(--c-card-bg);
+      border-radius: 16px;
+      padding: 28px 24px;
+      border: 1px solid var(--c-border);
+    }
+
+    .access-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--c-dark);
+      margin-bottom: 10px;
+    }
+
+    .access-card p {
+      font-size: 0.88rem;
+      color: var(--c-text-light);
+      font-weight: 300;
+      line-height: 1.9;
+    }
+
+    .access-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--c-dark-grad-1), var(--c-dark-grad-2), var(--c-dark-grad-3));
+      padding: 80px 24px;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .cta-section .cta-sub {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.88rem;
+      font-weight: 300;
+      margin-bottom: 12px;
+    }
+
+    .cta-deadline {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 6px 20px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .btn-large {
+      display: inline-block;
+      background: var(--c-primary);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 18px 52px;
+      border-radius: 50px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .btn-large:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(15,155,142,0.4);
+    }
+
+    .cancel-policy {
+      margin-top: 20px;
+      color: rgba(255,255,255,0.4);
+      font-size: 0.75rem;
+      font-weight: 300;
+    }
+
+    @media (max-width: 768px) {
+      .hero-koryu { min-height: 55vh; padding: 100px 20px 60px; }
+      .timetable-time { width: 80px; font-size: 0.75rem; }
+      .cta-section { padding: 60px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== ナビゲーション ===== -->
+  <nav class="site-nav">
+    <a href="index.html" class="logo">
+      「<span class="accent">細胞を創る</span>」研究会 若手の会
+    </a>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="events.html" class="current">イベント</a></li>
+      <li><a href="members.html">メンバー</a></li>
+      <li><a href="joinus.html">join us</a></li>
+      <li><a href="index.html#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- ===== 締切バナー ===== -->
+  <div class="deadline-bar">
+    ⚠️ 申込締切：2026年9月20日（日）23:59　定員になり次第締め切ります
+  </div>
+
+
+  <!-- ===== ヒーロー ===== -->
+  <section class="hero-koryu">
+    <div class="event-number" data-aos="fade-down">若手交流会 3.0</div>
+    <h1 data-aos="fade-up">
+      <a href="https://connpass.com/event/403059/" target="_blank" rel="noopener" style="color: inherit; text-decoration: none;">
+        「細胞を創る」研究会<br>若手交流会 3.0
+      </a>
+    </h1>
+    <p class="catchcopy" data-aos="fade-up" data-aos-delay="100">
+      ノーガードで夢語ろ♡
+    </p>
+    <div class="hero-meta" data-aos="fade-up" data-aos-delay="200">
+      <div class="hero-meta-item">
+        <span>📅</span>
+        <span>2026年10月28日（水）〜29日（木）</span>
+      </div>
+      <div class="hero-meta-item">
+        <span>📍</span>
+        <span>伊香保温泉 大衆旅館ふくぜん（群馬県）</span>
+      </div>
+      <div class="hero-meta-item">
+        <span>👥</span>
+        <span>定員 20〜30名</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 開催概要 ===== -->
+  <section class="section">
+    <h2 class="section-title" data-aos="fade-up">
+      <span class="accent">開催概要</span>
+    </h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+      合成生物学・再構成生物学に携わる若手が集い、研究の夢を語り合う1泊2日の交流会です。
+    </p>
+
+    <div class="info-grid">
+      <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="info-icon">📅</div>
+        <div class="info-label">開催日程</div>
+        <div class="info-value">10月28日（水）15:30<br>〜 29日（木）08:00</div>
+        <div class="info-sub">1泊2日</div>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="150">
+        <div class="info-icon">📍</div>
+        <div class="info-label">会場</div>
+        <div class="info-value">伊香保温泉<br>大衆旅館ふくぜん</div>
+        <div class="info-sub">群馬県渋川市伊香保町</div>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="info-icon">👥</div>
+        <div class="info-label">定員</div>
+        <div class="info-value">20〜30名</div>
+        <div class="info-sub">先着順</div>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="250">
+        <div class="info-icon">📝</div>
+        <div class="info-label">申込締切</div>
+        <div class="info-value">9月20日（日）23:59</div>
+        <div class="info-sub">定員になり次第締め切り</div>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="info-icon">🎯</div>
+        <div class="info-label">対象</div>
+        <div class="info-value">合成・再構成生物学の<br>若手研究者・学生</div>
+        <div class="info-sub">分野問わず歓迎</div>
+      </div>
+      <div class="info-card" data-aos="fade-up" data-aos-delay="350">
+        <div class="info-icon">🏨</div>
+        <div class="info-label">宿泊</div>
+        <div class="info-value">相部屋あり</div>
+        <div class="info-sub">生物学的性別で部屋割り</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== プログラム ===== -->
+  <section class="section" style="background: var(--c-primary-pale); max-width: 100%; padding: 80px 24px;">
+    <div style="max-width: var(--max-width); margin: 0 auto;">
+      <h2 class="section-title" data-aos="fade-up">
+        <span class="accent">プログラム</span>
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+        招待講演・ワークショップを通じて、研究の夢と未来を語り合います。
+      </p>
+
+      <div class="session-list">
+
+        <!-- Session 1 -->
+        <div class="session-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="session-header">
+            <span class="session-time">15:40〜16:40</span>
+            <span class="session-title">Session 1 ｜ 合成生物学のフロンティアを歩んできて…</span>
+          </div>
+          <div class="session-body">
+            <div class="speaker-list">
+              <div class="speaker-item">
+                <span class="speaker-name">神谷 厚輝 先生</span>
+                <span class="speaker-affil">群馬大学</span>
+              </div>
+              <div class="speaker-item">
+                <span class="speaker-name">谷内江 望 先生</span>
+                <span class="speaker-affil">ブリティッシュ・コロンビア大学 / 大阪大学</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Session 2 -->
+        <div class="session-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="session-header">
+            <span class="session-time">17:00〜18:00</span>
+            <span class="session-title">Session 2 ｜ 博士取得後の研究人生と夢について</span>
+          </div>
+          <div class="session-body">
+            <div class="speaker-list">
+              <div class="speaker-item">
+                <span class="speaker-name">古旗 祐一 先生</span>
+                <span class="speaker-affil">産業技術総合研究所</span>
+              </div>
+              <div class="speaker-item">
+                <span class="speaker-name">松林 英明 先生</span>
+                <span class="speaker-affil">東北大学</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ワークショップ -->
+        <div class="session-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="session-header workshop">
+            <span class="session-time">20:30〜22:30</span>
+            <span class="session-title">ワークショップ ｜ 新しい研究テーマの創発</span>
+          </div>
+          <div class="session-body">
+            <p class="session-desc">
+              参加者が専門性と技術を持ち寄り、融合させることで革新的な研究アイデアを開発します。
+              分野の壁を越えたコラボレーションのきっかけを作る場です。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== タイムスケジュール ===== -->
+  <section class="section">
+    <h2 class="section-title" data-aos="fade-up">
+      <span class="accent">タイムスケジュール</span>
+    </h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+      1泊2日のスケジュールです。
+    </p>
+
+    <div class="timetable" data-aos="fade-up" data-aos-delay="150">
+      <div class="timetable-day-header">1日目　10月28日（水）</div>
+      <div class="timetable-row">
+        <div class="timetable-time">15:00</div>
+        <div class="timetable-event highlight">受付開始（ふくぜんにて）</div>
+      </div>
+      <div class="timetable-row">
+        <div class="timetable-time">15:40</div>
+        <div class="timetable-event">Session 1「合成生物学のフロンティアを歩んできて…」</div>
+      </div>
+      <div class="timetable-row">
+        <div class="timetable-time">17:00</div>
+        <div class="timetable-event">Session 2「博士取得後の研究人生と夢について」</div>
+      </div>
+      <div class="timetable-row">
+        <div class="timetable-time">18:00</div>
+        <div class="timetable-event">夕食・入浴</div>
+      </div>
+      <div class="timetable-row">
+        <div class="timetable-time">20:30</div>
+        <div class="timetable-event">ワークショップ「新しい研究テーマの創発」</div>
+      </div>
+      <div class="timetable-row">
+        <div class="timetable-time">22:30</div>
+        <div class="timetable-event">自由交流・懇親</div>
+      </div>
+
+      <div class="timetable-day-header">2日目　10月29日（木）</div>
+      <div class="timetable-row">
+        <div class="timetable-time">〜08:00</div>
+        <div class="timetable-event highlight">解散</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 参加費 ===== -->
+  <section class="section" style="background: var(--c-primary-pale); max-width: 100%; padding: 80px 24px;">
+    <div style="max-width: 600px; margin: 0 auto;">
+      <h2 class="section-title" data-aos="fade-up">
+        <span class="accent">参加費</span>
+      </h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+        参加人数により変動します。当日会場にて現金でお支払いください。
+      </p>
+
+      <div class="fee-box" data-aos="fade-up" data-aos-delay="150">
+        <div style="font-size: 0.82rem; color: var(--c-text-muted); font-weight: 300;">参加費（目安）</div>
+        <div class="fee-amount">10,000〜15,000円</div>
+        <div class="fee-note">参加人数により変動 / 当日現金払い</div>
+
+        <div class="fee-includes">
+          <div class="fee-includes-item included">宿泊費</div>
+          <div class="fee-includes-item included">食費（夕食・朝食）</div>
+          <div class="fee-includes-item included">運営費</div>
+          <div class="fee-includes-item excluded">交通費（各自負担）</div>
+          <div class="fee-includes-item excluded">懇親会費（別途）</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== アクセス ===== -->
+  <section class="section">
+    <h2 class="section-title" data-aos="fade-up">
+      <span class="accent">アクセス</span>
+    </h2>
+    <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+      伊香保温泉 大衆旅館ふくぜん<br>
+      〒377-0102　群馬県渋川市伊香保町伊香保396-1
+    </p>
+
+    <div class="access-grid">
+      <div class="access-card" data-aos="fade-up" data-aos-delay="100">
+        <h3>🚃 電車・バス</h3>
+        <p>
+          JR上越新幹線「高崎駅」下車<br>
+          → 関越交通バス「伊香保温泉行き」乗車<br>
+          → 「伊香保温泉」バス停下車、徒歩約5分
+        </p>
+      </div>
+<div class="access-card" data-aos="fade-up" data-aos-delay="200">
+        <h3>🗺️ 地図</h3>
+        <p>
+          <a href="https://maps.google.com/?q=群馬県渋川市伊香保町伊香保396-1" target="_blank" rel="noopener" style="color: var(--c-primary); font-weight: 700;">Google マップで開く →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== 申し込み ===== -->
+  <section class="cta-section">
+    <div class="cta-deadline" data-aos="fade-down">申込締切：2026年9月20日（日）23:59</div>
+    <h2 data-aos="fade-up">参加申し込み</h2>
+    <p class="cta-sub" data-aos="fade-up" data-aos-delay="100">
+      connpassよりお申し込みください。定員になり次第締め切ります。<br>
+      ⚠️ 自己都合によるキャンセルはできません。
+    </p>
+    <a href="https://connpass.com/event/403059/" class="btn-large" data-aos="fade-up" data-aos-delay="200" target="_blank" rel="noopener">
+      connpassで申し込む →
+    </a>
+    <p class="cancel-policy" data-aos="fade-up" data-aos-delay="300">
+      お問い合わせ：wakate.saiboutsukuru[at]gmail.com（[at]を@に変換してください）
+    </p>
+  </section>
+
+
+  <!-- ===== フッター ===== -->
+  <footer class="site-footer">
+    <p>© 2026 「細胞を創る」研究会 若手の会</p>
+    <p class="mt-1">
+      <a href="index.html">トップページに戻る</a>
+      <span class="footer-sep">｜</span>
+      <a href="events.html">イベント一覧</a>
+    </p>
+    <p class="mt-1">
+      <a href="privacy.html">プライバシーポリシー</a>
+      <span class="footer-sep">｜</span>
+      Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+    </p>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true, offset: 80, easing: 'ease-out' });
+  </script>
+
+</body>
+</html>
